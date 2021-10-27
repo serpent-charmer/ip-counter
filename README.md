@@ -1,6 +1,13 @@
 # ip-counter
 
+## Сборка
+```
+mvn clean compile assembly:single
+```
+## Детали
 Используется алгоритм [hyperloglog](http://algo.inria.fr/flajolet/Publications/FlFuGaMe07.pdf).
+
+
 
 Результаты с файлом на 120ГБ
 
