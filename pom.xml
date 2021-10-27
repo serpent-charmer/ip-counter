@@ -32,6 +32,25 @@
 		<pluginManagement><!-- lock down plugins versions to avoid using Maven 
 				defaults (may be moved to parent pom) -->
 			<plugins>
+				
+				<plugin>
+				  <artifactId>maven-assembly-plugin</artifactId>
+				  <configuration>
+					<archive>
+					  <manifest>
+						<mainClass>com.telitag.mredip.App</mainClass>
+					  </manifest>
+					  <manifestEntries>
+                            <Multi-Release>true</Multi-Release>
+                        </manifestEntries>
+					</archive>
+					<descriptorRefs>
+					  <descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+				  </configuration>
+				</plugin>
+				
+				
 				<!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
 				<plugin>
 					<artifactId>maven-clean-plugin</artifactId>
